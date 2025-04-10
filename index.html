@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Administrador de Notas</title>
+  <link rel="stylesheet" href="CSS/index.css" />
+  <link rel="stylesheet" href="CSS/modal.css" />
+</head>
+<body>
+
+  <h1>Administrador de Notas</h1>
+
+  <!-- Botón para abrir el modal de agregar -->
+  <button id="btnMostrarAgregar">Agregar Nota</button>
+
+  <!-- Modal de Agregar Nota -->
+  <div id="modalAgregar" class="modal">
+    <div class="modal-content">
+      <span class="close" id="cerrarAgregar">&times;</span>
+      <h2>Agregar Nota</h2>
+      <form id="formAgregar">
+        <input type="text" id="tituloAgregar" placeholder="Título" required />
+        <textarea id="contenidoAgregar" placeholder="Contenido..."></textarea>
+        <button type="submit">Guardar</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Tabla de notas -->
+  <table id="notasTabla">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Título</th>
+        <th>Contenido</th>
+        <th>Fecha</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <!-- Modal de Editar Nota -->
+  <div id="modalEditar" class="modal">
+    <div class="modal-content">
+      <span class="close" id="cerrarEditar">&times;</span>
+      <h2>Editar Nota</h2>
+      <form id="formEditar">
+        <input type="hidden" id="idEditar" />
+        <input type="text" id="tituloEditar" placeholder="Título" required />
+        <textarea id="contenidoEditar" placeholder="Contenido..."></textarea>
+        <button type="submit">Actualizar</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="JS/cargar_notas.js"></script>
+  <script src="JS/agregar_notas.js"></script>
+  <script src="JS/editar_nota.js"></script>
+  <script src="JS/eliminar_notas.js"></script>
+
+</body>
+</html>
