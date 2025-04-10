@@ -22,7 +22,6 @@ function validarLongitudes($titulo, $contenido) {
 switch ($method) {
     case 'GET':
         if ($request) {
-            // Obtener una nota por ID
             $sql = "SELECT * FROM notas WHERE id = $request";
             $res = $conexion->query($sql);
             if ($res->num_rows > 0) {
@@ -32,7 +31,6 @@ switch ($method) {
                 echo json_encode(['mensaje' => 'Nota no encontrada']);
             }
         } else {
-            // Obtener todas las notas
             $sql = "SELECT * FROM notas ORDER BY fecha DESC";
             $resultado = $conexion->query($sql);
             $notas = [];

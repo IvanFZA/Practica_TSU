@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const tituloEditar = document.getElementById('tituloEditar');
     const contenidoEditar = document.getElementById('contenidoEditar');
   
-    // Mostrar modal desde otra función
+
     window.abrirModalEditar = function (nota) {
       idEditar.value = nota.id;
       tituloEditar.value = nota.titulo;
@@ -14,19 +14,19 @@ document.addEventListener('DOMContentLoaded', () => {
       modalEditar.style.display = "block";
     };
   
-    // Cerrar modal
+
     btnCerrar.addEventListener("click", () => {
       modalEditar.style.display = "none";
     });
   
-    // Cerrar si se hace clic fuera
+
     window.addEventListener("click", (e) => {
       if (e.target === modalEditar) {
         modalEditar.style.display = "none";
       }
     });
   
-    // Enviar actualización
+
     formEditar.addEventListener('submit', function (e) {
       e.preventDefault();
   
