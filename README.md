@@ -26,29 +26,51 @@ Este es un proyecto de práctica técnica que implementa una **aplicación web c
 
 ## 📁 Estructura del proyecto
 Practica_TSU/
+
 │
+
 ├── index.html                     # Página principal con la tabla y formularios
+
 │
 ├── db/                            #Base de datos
+
 │   ├── README.md                  # Descripción de como crear la base de datos
+
 │   └── notas_backup.sql           # Script SQL para crear la base de datos y tabla 'notas'
+
 │
+
 ├── CSS/                           # Hojas de estilo para la interfaz
+
 │   ├── index.css                  # Estilo general de la página
+
 │   └── modal.css                  # Estilos para los formularios modales
+
 │
+
 ├── JS/                            # Scripts de lógica del lado del cliente
+
 │   ├── agregar_notas.js           # Función para agregar nuevas notas
+
 │   ├── cargar_notas.js            # Función para cargar todas las notas y mostrarlas
+
 │   ├── editar_nota.js             # Función para editar una nota existente
+
 │   └── eliminar_notas.js          # Función para eliminar una nota por ID
+
 │
+
 ├── PHP/                           # Código de conexión al servidor y base de datos
+
 │   └── conexion.php               # Archivo de conexión MySQL
+
 │
 └── api/                           # API RESTful
+
     └── notes/
+    
         └── index.php              # Endpoints de la API (GET, POST, PUT, DELETE)
+        
 
 
 ---
